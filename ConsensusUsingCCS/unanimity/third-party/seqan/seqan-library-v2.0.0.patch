@@ -1,0 +1,120 @@
+diff -r -p1 include/seqan/align/evaluate_alignment.h ../pbccs/third-party/seqan-library-2.0.0/include/seqan/align/evaluate_alignment.h
+*** include/seqan/align/evaluate_alignment.h	2015-10-01 17:15:19.494243000 -0700
+--- ../pbccs/third-party/seqan-library-2.0.0/include/seqan/align/evaluate_alignment.h	2015-10-01 16:15:12.981425000 -0700
+*************** TScoreVal computeAlignmentStats(Alignmen
+*** 226,228 ****
+                  stats.numGapOpens += 1;
+!                 stats.alignmentScore += scoreGapOpen(scoringScheme);
+              }
+--- 226,228 ----
+                  stats.numGapOpens += 1;
+!                 stats.alignmentScore += scoreGapOpenVertical(scoringScheme);
+              }
+*************** TScoreVal computeAlignmentStats(Alignmen
+*** 231,233 ****
+                  stats.numGapExtensions += 1;
+!                 stats.alignmentScore += scoreGapExtend(scoringScheme);
+              }
+--- 231,233 ----
+                  stats.numGapExtensions += 1;
+!                 stats.alignmentScore += scoreGapExtendVertical(scoringScheme);
+              }
+*************** TScoreVal computeAlignmentStats(Alignmen
+*** 246,248 ****
+                  stats.numGapOpens += 1;
+!                 stats.alignmentScore += scoreGapOpen(scoringScheme);
+              }
+--- 246,248 ----
+                  stats.numGapOpens += 1;
+!                 stats.alignmentScore += scoreGapOpenHorizontal(scoringScheme);
+              }
+*************** TScoreVal computeAlignmentStats(Alignmen
+*** 251,253 ****
+                  stats.numGapExtensions += 1;
+!                 stats.alignmentScore += scoreGapExtend(scoringScheme);
+              }
+--- 251,253 ----
+                  stats.numGapExtensions += 1;
+!                 stats.alignmentScore += scoreGapExtendHorizontal(scoringScheme);
+              }
+diff -r -p1 include/seqan/journaled_set/score_biaffine.h ../pbccs/third-party/seqan-library-2.0.0/include/seqan/journaled_set/score_biaffine.h
+*** include/seqan/journaled_set/score_biaffine.h	2015-10-01 17:12:16.350211000 -0700
+--- ../pbccs/third-party/seqan-library-2.0.0/include/seqan/journaled_set/score_biaffine.h	2015-10-01 16:15:13.005404000 -0700
+*************** scoreGapExtendHorizontal(Score<TScoreVal
+*** 138,139 ****
+--- 138,146 ----
+  
++ template <typename TScoreValue>
++ inline TScoreValue
++ scoreGapExtendHorizontal(Score<TScoreValue, BiAffine> const & me)
++ {
++     return me._gapExtendHorizontal;
++ }
++ 
+  // ----------------------------------------------------------------------------
+*************** scoreGapOpenHorizontal(Score<TScoreValue
+*** 151,152 ****
+--- 158,166 ----
+  
++ template <typename TScoreValue>
++ inline TScoreValue
++ scoreGapOpenHorizontal(Score<TScoreValue, BiAffine> const & me)
++ {
++     return me._gapOpenHorizontal;
++ }
++ 
+  // ----------------------------------------------------------------------------
+*************** scoreGapExtendVertical(Score<TScoreValue
+*** 164,165 ****
+--- 178,186 ----
+  
++ template <typename TScoreValue>
++ inline TScoreValue
++ scoreGapExtendVertical(Score<TScoreValue, BiAffine> const & me)
++ {
++     return me._gapExtendVertical;
++ }
++ 
+  // ----------------------------------------------------------------------------
+*************** scoreGapOpenVertical(Score<TScoreValue,
+*** 174,175 ****
+--- 195,203 ----
+  {
++     return me._gapOpenVertical;
++ }
++ 
++ template <typename TScoreValue>
++ inline TScoreValue
++ scoreGapOpenVertical(Score<TScoreValue, BiAffine> const & me)
++ {
+      return me._gapOpenVertical;
+Only in include/seqan/: LICENSE
+diff -r -p1 include/seqan/seeds/banded_chain_alignment_traceback.h ../pbccs/third-party/seqan-library-2.0.0/include/seqan/seeds/banded_chain_alignment_traceback.h
+*** include/seqan/seeds/banded_chain_alignment_traceback.h	2015-10-01 17:15:19.813167000 -0700
+--- ../pbccs/third-party/seqan-library-2.0.0/include/seqan/seeds/banded_chain_alignment_traceback.h	2015-10-01 16:15:13.032371000 -0700
+*************** inline void _glueTracebacks(TTraceSet &
+*** 195,196 ****
+--- 195,197 ----
+      SEQAN_ASSERT_EQ_MSG(isGlued, true, "Fatal error while trying to connect trace backs: No glue point available!");
++     (void)isGlued;
+  }
+diff -r -p1 include/seqan/sequence/string_base.h ../pbccs/third-party/seqan-library-2.0.0/include/seqan/sequence/string_base.h
+*** include/seqan/sequence/string_base.h	2015-10-01 17:12:17.229235000 -0700
+--- ../pbccs/third-party/seqan-library-2.0.0/include/seqan/sequence/string_base.h	2015-10-01 16:15:13.050383000 -0700
+*************** value(String<TValue, TSpec> & me,
+*** 427,429 ****
+--- 427,431 ----
+  {
++ #if SEQAN_ENABLE_DEBUG
+      typedef typename Position< String<TValue, TSpec> >::Type TStringPos SEQAN_TYPEDEF_FOR_DEBUG;
++ #endif
+      SEQAN_ASSERT_LT_MSG(static_cast<TStringPos>(pos), static_cast<TStringPos>(length(me)), "Trying to access an element behind the last one!");
+*************** value(String<TValue, TSpec> const & me,
+*** 437,439 ****
+--- 439,443 ----
+  {
++ #if SEQAN_ENABLE_DEBUG
+      typedef typename Position< String<TValue, TSpec> const >::Type TStringPos SEQAN_TYPEDEF_FOR_DEBUG;
++ #endif
+      SEQAN_ASSERT_LT_MSG(static_cast<TStringPos>(pos), static_cast<TStringPos>(length(me)), "Trying to access an element behind the last one!");
+Only in include/seqan/statistics: .statistics_markov_model.h.swp

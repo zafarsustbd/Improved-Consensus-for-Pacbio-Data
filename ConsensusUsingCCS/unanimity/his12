@@ -1,0 +1,508 @@
+    1  git submodule update --init --remote
+    2  mkdir build
+    3  ls
+    4  cd build/
+    5  ls
+    6  cmake -DCMAKE_INSTALL_PREFIX=~/bin .. 
+    7  sudo apt-get install cmake
+    8  cmake -DCMAKE_INSTALL_PREFIX=~/bin ..
+    9  sudo apt-get install zlib1g-dev
+   10  cmake -DCMAKE_INSTALL_PREFIX=~/bin ..
+   11  sudo apt-get install boost
+   12  sudo apt-get install libboost-dev
+   13  cmake -DCMAKE_INSTALL_PREFIX=~/bin ..
+   14  vim /home/rathishdas/Documents/sbu/prj/unanimity/build/CMakeFiles/CMakeOutput.log
+   15  pwd
+   16  cd ../../..
+   17  ls
+   18  cd prj/
+   19  ls
+   20  cd unanimity-
+   21  cd unanimity-master/
+   22  ls
+   23  cmake ./
+   24  ls
+   25  mkdir build
+   26  cd build/
+   27  cmake ../
+   28  cd ../
+   29  ls
+   30  find -name "htslibConfig.cmake"
+   31  cd  ../
+   32  cd /home/rathishdas/Documents/sbu/prj/unanimity/build
+   33  ls
+   34  cmake -DCMAKE_INSTALL_PREFIX=~/bin ..
+   35  cmake ../
+   36  echo $Boost_INCLUDE_DIRS
+   37  cmake -D_boost_TEST_VERSIONS=1.57 -DBoost_DEBUG=ON -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+   38  cd /usr
+   39  find -name "zlib.h"
+   40  sudo find -name "zlib.h"
+   41  cd Documents/sbu/
+   42  ls
+   43  cd prj/
+   44  ls
+   45  cd unanimity-master/
+   46  ls
+   47  cmake ./
+   48  echo $htslib_DIR
+   49  export htslib_DIR=htslibConfig.cmake
+   50  cmake ./
+   51  echo $CMAKE_PREFIX_PATH
+   52  ls /usr/local/include/
+   53  ls
+   54  cd ../
+   55  ls
+   56  cd unanimity
+   57  ls
+   58  cd ../
+   59  ls
+   60  cd unanimity-master/
+   61  ls
+   62  ls -l
+   63  cd ../
+   64  mkdir new
+   65  mv ../english/unanimity-master.zip new/
+   66  cd new
+   67  unzip unanimity-master.zip 
+   68  ls
+   69  cd unanimity-master/
+   70  ls
+   71  git submodule update --init --remote
+   72  cd ../..
+   73  cd unanimity
+   74  ls
+   75  git submodule update --init --remote
+   76  cd build/
+   77  ls
+   78  cmake -DCMAKE_INSTALL_PREFIX=~/bin ..
+   79  sudo apt-get install libboost-all-dev
+   80  cmake -DCMAKE_INSTALL_PREFIX=~/bin ..
+   81  vim /home/rathishdas/Documents/sbu/prj/unanimity/build/CMakeFiles/CMakeOutput.log
+   82  vim /home/rathishdas/Documents/sbu/prj/unanimity/build/CMakeFiles/CMakeError.log
+   83  cmake ../
+   84  sudo apt-get remove *boost*
+   85  boost
+   86  find /usr -name "boost"
+   87  sudo find /usr -name "boost"
+   88  service NetworkManager status
+   89  service NetworkManager restart
+   90  cd CompBio/
+   91  ls
+   92  cd pitchfork/
+   93  ls
+   94  cd deployment/
+   95  ls
+   96  vim setup-env.sh
+   97  cd ../
+   98  sudo apt-get install samtools
+   99  sudo apt-get install pysam
+  100  sudo apt-get install python-pysam
+  101  samtools sort
+  102  samtools sort -n data/m54113_160913_184949.subreads.bam sort_file
+  103  history > his2
+  104  ccs
+  105  ccs --noPolish ../../data/m54113_160913_184949.subreads.bam rathish_test
+  106  ccs --noPolish ../../data/m54113_160913_184949.subreads.bam test
+  107  cd ..
+  108  cd ../
+  109  cd data/
+  110  ccs m54113_160913_184949.subreads.bam test
+  111  ccs m54113_160913_184949.subreads.bam test.bam
+  112  ccs --noPolish m54113_160913_184949.subreads.bam test.bam
+  113  rm -f test.bam
+  114  ccs --noPolish m54113_160913_184949.subreads.bam test.bam
+  115  ccs view test.bam
+  116  history > his1
+  117  cd Documents/sbu/english/
+  118  mkdir ~/CompBio
+  119  cp make_css.sh ~/CompBio/
+  120  cd ~/CompBio
+  121  ls
+  122  sh ./make_css.sh 
+  123  pip
+  124  sudo apt-get update pip
+  125  sudo apt-get upgrade pip
+  126  echo $PATH$
+  127  locate pip
+  128  which pip
+  129  echo $PATH$
+  130  ls
+  131  rm -fr pitchfork
+  132  sudo sh ./make_css.sh
+  133  ls
+  134  vim make_css.sh
+  135  /home/rathishdas/CompBio/pitchfork/deployment/bin/pip --cache-dir /home/rathishdas/CompBio/pitchfork/.git/pip install --verbose --upgrade --no-deps  /home/rathishdas/CompBio/pitchfork/workspace/unanimity/
+  136  pip --cache-dir /home/rathishdas/CompBio/pitchfork/.git/pip install --verbose --upgrade --no-deps  /home/rathishdas/CompBio/pitchfork/workspace/unanimity/
+  137  pip install --upgrade pip
+  138  cd pitchfork/
+  139  ls
+  140  cd deployment/
+  141  ls
+  142  sudo make pbccs
+  143  cd ../
+  144  sudo make pbccs
+  145  sudo make blasr
+  146  echo $?
+  147  ls
+  148  cd deployment/
+  149  ls
+  150  ccs
+  151  bash --init-file deployment/setup-env.sh
+  152  ccs
+  153  cd ../
+  154  bash --init-file deployment/setup-env.sh
+  155  sudo apt-get install pysam
+  156  sudo apt-get install samtools
+  157  pip install pysam
+  158  mkdir ~/data
+  159  cd ~/data
+  160  sudo wget https://downloads.pacbcloud.com/public/SequelData/ArabidopsisDemoData/SequenceData/1_A01_customer/m54113_160913_184949.subreads.bam
+  161  echo $?
+  162  ls
+  163  samtools
+  164  samtools view --help
+  165  samtools view m54113_160913_184949.subreads.bam 
+  166  samtools
+  167  ls
+  168  samtools view m54113_160913_184949.subreads.bam 
+  169  samtools view --help
+  170  cd ../
+  171  cd CompBio/
+  172  ls
+  173  vim make_css.sh 
+  174  cd ../data/
+  175  ls
+  176  samtools view -h m54113_160913_184949.subreads.bam
+  177  samtools view -h m54113_160913_184949.subreads.bam | head -7
+  178  samtools view -h m54113_160913_184949.subreads.bam | head -8
+  179  samtools idxstats m54113_160913_184949.subreads.bam 
+  180  ls
+  181  samtools index m54113_160913_184949.subreads.bam 
+  182  ls
+  183  samtools idxstats m54113_160913_184949.subreads.bam 
+  184  samtools view test.bam
+  185  samtools view test.bam | wc -l
+  186  history > his
+  187  cd CompBio/
+  188  ls
+  189  cd pitchfork/
+  190  ls
+  191  find -name "PoaGraph*"
+  192  vim ./workspace/unanimity/src/poa/PoaGraphImpl.h
+  193  vim ./workspace/unanimity/src/poa/PoaGraph.cpp
+  194  vim ./workspace/unanimity/src/poa/PoaGraphImpl.cpp
+  195  cd ../
+  196  ls
+  197  git clone https://github.com/ljdursi/poapy.git
+  198  ls
+  199  cd poapy/
+  200  ls
+  201  ./poa.py examples/example4.fa --html ex4.html
+  202  ls
+  203  mozilla ex4.html
+  204  ls
+  205  du -sh /
+  206  sudo du -sh /
+  207  sudo du -sh 
+  208  ls
+  209  cd ../../
+  210  cd data/
+  211  ls
+  212  du -sh wgEncodeUwRepliSeqK562G1AlnRep1.bam
+  213  samtools bam2fq wgEncodeUwRepliSeqK562G1AlnRep1.bam | seqtk seq -A > output.fa
+  214  sudo apt-get install seqtk
+  215  samtools bam2fq wgEncodeUwRepliSeqK562G1AlnRep1.bam | seqtk seq -A > output.fa
+  216  ls
+  217  du -sh output.fa
+  218  samtools bam2fq wgEncodeUwRepliSeqK562G1AlnRep1.bam | seqtk seq -A 
+  219  seqtk seq -A ${samtools bam2fq wgEncodeUwRepliSeqK562G1AlnRep1.bam}
+  220  samtools bam2fq wgEncodeUwRepliSeqK562G1AlnRep1.bam
+  221  seqtk --help
+  222  seqtk 
+  223  samtools bam2fq wgEncodeUwRepliSeqK562G1AlnRep1.bam | seqtk seq > a.fa
+  224  samtools bam2fq wgEncodeUwRepliSeqK562G1AlnRep1.bam | seqtk seq 
+  225  ls
+  226  du -sh a.fa
+  227  vim a.fa
+  228  vim ../CompBio/poapy/examples/example4.fa 
+  229  samtools bam2fq wgEncodeUwRepliSeqK562G1AlnRep1.bam > temp.fa
+  230  vim temp.fa
+  231  vim read.py
+  232  vim temp.fa
+  233  vim read.py
+  234  python read.py 
+  235  vim read.py
+  236  ls
+  237  vim read_c.cpp
+  238  make read_c
+  239  vim read_c.cpp
+  240  make read_c
+  241  vim read_c.cpp
+  242  make read_c
+  243  vim read_c.cpp
+  244  make read_c
+  245  ./read_c
+  246  ls
+  247  vim read_c.cpp
+  248  vim out.fa
+  249  vim read_c.cpp
+  250  vim out.fa
+  251  vim read_c.cpp
+  252  du -sh temp.fa
+  253  vim read_c.cpp
+  254  make read_c
+  255  ./read_c
+  256  vim out.fa 
+  257  vim ../CompBio/poapy/examples/example4.fa 
+  258  vim read_c.cpp 
+  259  make read_c
+  260  vim read_c.cpp 
+  261  make read_c
+  262  vim read_c.cpp 
+  263  make read_c
+  264  vim read_c.cpp 
+  265  make read_c
+  266  ./read_c
+  267  vim out.fa 
+  268  vim ../CompBio/poapy/examples/example4.fa 
+  269  du -sh out.fa
+  270  cp out.fa ../CompBio/poapy/examples/
+  271  cd ../CompBio/poapy
+  272  ./poa.py examples/out.fa --html ex5.html
+  273  cd data/
+  274  ls
+  275  vim read_c.cpp
+  276  make read_c
+  277  vim read_c.cpp
+  278  make read_c
+  279  ./read_c
+  280  cp out_100.fa ../CompBio/poapy/examples/
+  281  cd ../CompBio/poapy
+  282  ./poa.py examples/out_100.fa --html ex100.html
+  283  cd data
+  284  ls
+  285  vim 7864612.sam
+  286  pwd
+  287  find -iname "manya"
+  288  cd data/
+  289  ls
+  290  samtools 
+  291  samtools sort -n m54113_160913_184949.subreads.bam m54113_160913_184949.subreads_sorted
+  292  ls
+  293  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | awk '{print $1}' | cut -d 
+  294  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | awk '{print $1}' | cut -d "/" -f2 | uniq -c | less
+  295  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | awk '{print $1}' | cut -d "/" -f2 | uniq -c | less > cnt20k.txt
+  296  grep "3" cnt20k.txt
+  297  grep "3 " cnt20k.txt
+  298  grep "4 " cnt20k.txt
+  299  grep "5 " cnt20k.txt
+  300  grep "6 " cnt20k.txt
+  301  grep "7 " cnt20k.txt
+  302  ls
+  303  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -7 | less
+  304  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 
+  305  vim 7864612.sam
+  306  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | grep 7864612 >> 7864612.sam
+  307  vim 7864612.sam
+  308  python 
+  309  sudo apt-get install ipython 
+  310  ipython
+  311  sudo apt-get update pysam
+  312  sudo apt-get upgrade pysam
+  313  pip install -u pysam
+  314  pip install -U pysam
+  315  pip install --upgrade pip
+  316  sudo apt-get install pip
+  317  python
+  318  easy_install pip
+  319  sudo easy_install pip
+  320  sudo easy_install pysam
+  321  sudo apt-get remove pysam
+  322  sudo apt-get remove python-pysam
+  323  sudo apt-get install python-pysam
+  324  sudo apt-get remove python-pysam
+  325  pip install pysam
+  326  sudo pip install pysam
+  327  ipython
+  328  python create_bam.py 
+  329  ls
+  330  du -sh 7864612.bam
+  331  ccs
+  332  pwd
+  333  cd ../
+  334  pwd
+  335  cd data/
+  336  ls
+  337  pwd
+  338  sudo find -name "his"
+  339  vim his
+  340  samtools view -h out2.bam
+  341  echo $?
+  342  samtools view -h out3.bam
+  343  ls
+  344  vim 7864612.bam
+  345  vim create_bam.py
+  346  rm -f 7864612*
+  347  cp 
+  348  cp ~/Documents/sbu/english/7864612.sam ./
+  349  ls
+  350  python create_bam.py
+  351  vim create_bam.py
+  352  python create_bam.py
+  353  vim create_bam.py
+  354  python create_bam.py
+  355  ls
+  356  rm -f out3.bam
+  357  rm -f out2.bam
+  358  samtools view -h out2.bam
+  359  ls
+  360  history > his_5
+  361  vim his_5
+  362  ls
+  363  ssh tg833874@stampede.tacc.utexas.edu
+  364  cd ../
+  365  find -name "poagraph.py"
+  366  sudo find -name "poagraph.py"
+  367  cd ./CompBio/poapy
+  368  ls
+  369  python simplefasta.py examples/example1.fa 
+  370  vim examples/example1.fa
+  371  vim examples/example4.fa
+  372  python simplefasta.py examples/example4.fa 
+  373  vim seqgraphalignment.py
+  374  sudo apt-get upgrade skype
+  375  skype --version
+  376  cd CompBio/
+  377  ls
+  378  cd poaC/
+  379  ls
+  380  cd poaV2/
+  381  ls
+  382  history > his_8
+  383  vim his_8 
+  384  ls
+  385  vim README 
+  386  poa -read_fasta multidom.seq -clustal multidom.aln blosum80.mat
+  387  ./poa -read_fasta multidom.seq -clustal multidom.aln blosum80.mat
+  388  ls
+  389  vim command.txt
+  390  pwd
+  391  ls
+  392  vim command.txt 
+  393  samtools bam2fq 7864612.bam > temp.fa
+  394  vim temp.fa 
+  395  vim read_c.cpp 
+  396  make read_c
+  397  ./read_c 7864612.bam 7864612.fa
+  398  vim 7864612.fa 
+  399  ls
+  400  samtools view -h 7864612.bam 
+  401  ls
+  402  vim Makefile 
+  403  grep -li "consensus" *
+  404  vim main.c
+  405  vim heaviest_bundle.c
+  406  vim poa.h
+  407  vim README 
+  408  vim heaviest_bundle.c
+  409  vim Makefile 
+  410  vim align_score.c 
+  411  grep -lr "ResidueScoreMatrix_T" *
+  412  grep -lr "ResidueScoreMatrix_T" *c
+  413  vim align_lpo.c
+  414  vim buildup_lpo.c
+  415  vim main.c
+  416  vim seq_util.c
+  417  ls
+  418  vim read_c.cpp 
+  419  make read_c
+  420  pwd
+  421  vim 7864612.fa
+  422  mv 7864612.fa 7864612_tmp.fa
+  423  ./read_c 7864612_tmp.fa 7864612.fa
+  424  vim 7864612.fa
+  425  vim 7864612_tmp.fa
+  426  vim 7864612.fa
+  427  vim read_c.cpp 
+  428  cp read_c.cpp read_c_fa.cpp
+  429  vim read_c_fa.cpp
+  430  make read_c_fa
+  431  ls
+  432  ./read_c_fa 7864612_tmp.fa 7864612.fa
+  433  vim 7864612.fa
+  434  vim README 
+  435  poa -read_fasta 7864612.fa -clustal 7864612.aln blosum80.mat
+  436  ./poa -read_fasta 7864612.fa -clustal 7864612.aln blosum80.mat
+  437  echo $?
+  438  vim 7864612.aln
+  439  vim 7864612.fa
+  440  vim 7864612.aln
+  441  ls
+  442  vim multidom.aln
+  443  vim multidom.seqmultidom.seq
+  444  vim multidom.seq
+  445  vim -O multidom.seq multidom.aln 
+  446  ls
+  447  vim Makefile 
+  448  samtools view -h 7864612.bam 
+  449  ./poa -read_fasta 7864612.fa -clustal 7864612.aln blosum80.mat -po out7864612.po
+  450  vim out7864612.po
+  451  vim 7864612.aln
+  452  vim out7864612.po
+  453  vim README 
+  454  ./poa -read_fasta 7864612.fa -clustal 7864612.aln blosum80.mat -po out7864612.po -hb
+  455  less out7864612.po 
+  456  ./poa -read_fasta 7864612.fa -clustal 7864612.aln blosum80.mat -po out7864612_wo.po 
+  457  vim -O out7864612_wo.po out7864612.po
+  458  ls
+  459  vim heaviest_bundle.c
+  460  cd ../
+  461  cd  data/
+  462  ls
+  463  vim read_c.cpp
+  464  vi temp.fa 
+  465  ls
+  466  vim create_bam.py
+  467  pwd
+  468  vim create_bam.py
+  469  cp 7864612.bam :wq
+  470  ls
+  471  rm -f :\:wq 
+  472  ls
+  473  vim :\:wq 
+  474  rm -f :\:wq 
+  475  ls
+  476  rm -f ":\:wq"
+  477  ls
+  478  cp 7864612.bam /home/rathishdas/CompBio/poaC/poaV2
+  479  vim read_c.cpp
+  480  cp read_c.cpp /home/rathishdas/CompBio/poaC/poaV2/
+  481  ls
+  482  vim 7864612.sam
+  483  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -5000 | awk '{print $1}' | cut -d "/" -f2 | uniq -c
+  484  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | grep 7864612
+  485  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | grep 7864612 | awk '{print $1}' 
+  486  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | grep 7864612 | awk '{print $2}' 
+  487  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | grep 7864612 | awk '{print $3}' 
+  488  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | grep 7864612 | awk '{print $4}' 
+  489  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | grep 7864612 | awk '{print $5}' 
+  490  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | grep 7864612 | awk '{print $10}' 
+  491  samtools view -h m54113_160913_184949.subreads_sorted.bam | head -20000 | grep 7864612 | awk '{print $10}' > temp1.fa
+  492  vim temp1.fa
+  493  vim read_c.cpp 
+  494  make read_c
+  495  vim read_c.cpp 
+  496  make read_c
+  497  vim read_c.cpp 
+  498  vim temp1.fa 
+  499  vim temp.fa 
+  500  cp temp1.fa /home/rathishdas/CompBio/poaC/poaV2/7864612.fa
+  501  cd CompBio/
+  502  ls
+  503  cd newccs/
+  504  ls
+  505  cd unanimity/
+  506  cd ../..
+  507  cd newccs/unanimity/
+  508  history > his12
